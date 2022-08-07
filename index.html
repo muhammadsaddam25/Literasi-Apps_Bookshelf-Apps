@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+  <header>
+    <div class="jumbotron">
+      <nav>
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-menu-btn">
+          <i class="fi fi-sr-menu-burger"></i>
+        </label>
+
+        <ul class="menu">
+          <a href="#">Beranda</a>
+          <a href="#">Riwayat</a>
+          <a href="#">Kontak</a>
+          <label for="chk" class="hide-menu-btn">
+            <i class="fas fa-times"></i>
+          </label>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="content">
+    <div class="col-1">
+      <div class="user-information my-container">
+        <h1 class="user-name">Sobat Literasi</h1>
+        <ul>
+          <li>
+            <p>Jumlah Buku</p>
+            <h4 id="jumlahBuku">20</h4>
+          </li>
+        </ul>
+        <div class="my-icon">
+          <div class="add-book" id="add-book">
+           <i class="fi-sr-add"></i>
+          </div>
+         <h5>Tambahkan</h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="my-container welcome">
+        <h1>Selamat Datang</h1>
+      </div>
+      
+      
+      <div class="content-book">
+        <div class="unread" id="unread">
+          <h4 class="">Belum Dibaca</h4>
+          <title class="item-Title"></title>
+        </div>
+        
+         <div class="read" id="read">
+          <h4>Sudah Dibaca</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="modal">
+        <section class="my-container">
+            <h2>Buku Baru</h2>
+            <form id="form">
+                <div class="input-group">
+                    <input type="text" id="title" placeholder="Judul Buku" class="input-form"
+                        maxlength="120" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="text" id="author" placeholder="Author" class="input-form"
+                        maxlength="60" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="date" id="year" 
+                        class="input-form" min="1900" max="2026" />
+                </div>
+                <div class="button-group">
+                    <button type="reset" class="close" id="close">Tutup</button>
+                    <button type="submit" id="save">Simpan</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <script src="./storage.js"></script>
+    <script src="./script.js"></script>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="container-fluid">
+          <div class="footer-social-icons">
+            <ul>
+              <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+            <div class="footer-bottom">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <p>Copyright 2022 Bookshelf App All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
